@@ -56,7 +56,7 @@ def value_gen(data):
 value = value_gen(df)
 #x = next(value)
 
-print(df)
+#print(df)
 
 model = pickle.load(open('EllipticEnvelope_model.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
@@ -77,8 +77,9 @@ def generate_next_data_values():
 def stuff():
     try:
         #a = next(value)
+        print('Hello there')
         a = generate_next_data_values()
-        print("a =",a)
+        #print("a =",a)
         scaled_df = scaler.transform(np.array(a).reshape(1, -1))
         scaled_df = pd.DataFrame(scaled_df, columns = useful_features)
         anomaly_predict = model.predict(scaled_df)
