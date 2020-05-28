@@ -77,6 +77,8 @@ def generate_next_data_values():
 def stuff():
     try:
         #a = next(value)
+        global df
+        print(df)
         print('Hello there')
         a = generate_next_data_values()
         #print("a =",a)
