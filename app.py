@@ -32,7 +32,7 @@ app = Flask(__name__)
 
 pwd = os.getcwd()
 
-df = pd.read_csv(pwd +"\Combined.csv")
+df = pd.read_csv(pwd +"/Combined.csv")
 for i in ['Mode', 'Sample Number', 'Seconds', 'Minutes', 'Hours', 'Date', 'Month']:
     df[i] = pd.to_numeric(df[i], downcast='integer')
 print(df.iloc[0]['pCut::Motor_Torque'])
