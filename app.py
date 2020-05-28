@@ -77,11 +77,7 @@ def generate_next_data_values():
 def stuff():
     try:
         #a = next(value)
-        global df
-        print(df)
-        print('Hello there')
         a = generate_next_data_values()
-        #print("a =",a)
         scaled_df = scaler.transform(np.array(a).reshape(1, -1))
         scaled_df = pd.DataFrame(scaled_df, columns = useful_features)
         anomaly_predict = model.predict(scaled_df)

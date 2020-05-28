@@ -217,6 +217,12 @@ div {
         iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
     }
     */
+    
+    function myFunction() {
+          var x = document.URL;
+          //location.replace(x.concat("/dash/"));
+          window.open(x.concat("/dash/"), '_blank');
+    }
 
 </script>
 
@@ -224,8 +230,8 @@ div {
 <p id='data_end' style='font-size:20px;text-align:center;color:red;'></p>
 <br>
 
-<a id='graphs' href='http://localhost:8050/dash/' target='_blank'><p style='font-size:30px;text-align:center;'>Live Graphs</p></a>
-
+<a id='graphs' onclick="myFunction()" target='_blank'><p style='font-size:30px;text-align:center;'>Live Graphs</p></a>
+<!--href='http://localhost:8050/dash/'-->
 <div id='month'>
     <p id='column9'>Month</p>
     <p id='col9'></p>
