@@ -121,8 +121,8 @@ def stuff():
                        time = total_time
                        )
         """
-    except:
-        print("Data has ended")
+    except Exception as e:
+        print("Exception is :",e)
         return jsonify(result='data not found')
 
 
