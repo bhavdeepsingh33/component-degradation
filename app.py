@@ -33,9 +33,12 @@ app = Flask(__name__)
 pwd = os.getcwd()
 
 df = pd.read_csv(pwd +"/Combined.csv")
-for i in ['Mode', 'Sample Number', 'Seconds', 'Minutes', 'Hours', 'Date', 'Month']:
-    df[i] = pd.to_numeric(df[i], downcast='integer')
-print(df.iloc[0]['pCut::Motor_Torque'])
+#print(df.head())
+#print(df.describe)
+#print(df.dtypes)
+#for i in ['Mode', 'Sample Number', 'Seconds', 'Minutes', 'Hours', 'Date', 'Month']:
+#    df[i] = pd.to_numeric(df[i], downcast='integer')
+#print(df.iloc[0]['pCut::Motor_Torque'])
 
 useful_features = ['pCut::Motor_Torque',
                    'pCut::CTRL_Position_controller::Lag_error',
