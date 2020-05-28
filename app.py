@@ -56,6 +56,7 @@ def value_gen(data):
 value = value_gen(df)
 #x = next(value)
 
+print(df)
 
 model = pickle.load(open('EllipticEnvelope_model.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
