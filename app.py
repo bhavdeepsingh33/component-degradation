@@ -216,7 +216,8 @@ def col1_graph_scatter(n):
     return {'data': [data],'layout' : go.Layout(xaxis=dict(range=[min(data_x),max(data_x)]),
                                                 yaxis=dict(range=[min(data_y),max(data_y)]),
                                                 xaxis_title="Time in seconds",
-                                                yaxis_title="pCut::Motor_Torque")}
+                                                yaxis_title="pCut::Motor_Torque",
+                                                title="pCut::Motor_Torque")}
 
 
 @dash_app.callback(Output('pCut::CTRL_Position_controller::Lag_error', 'figure'),
@@ -242,7 +243,8 @@ def col2_graph_scatter(n):
     return {'data': [data],'layout' : go.Layout(xaxis=dict(range=[min(data_x),max(data_x)]),
                                                 yaxis=dict(range=[min(data_y),max(data_y)]),
                                                 xaxis_title="Time in seconds",
-                                                yaxis_title="pCut::CTRL_Position_controller::Lag_error")}
+                                                yaxis_title="pCut::CTRL_Position_controller::Lag_error",
+                                                title="pCut::CTRL_Position_controller::Lag_error")}
 
 @dash_app.callback(Output('pCut::CTRL_Position_controller::Actual_position', 'figure'),
         [Input('col3-update', 'n_intervals')])
@@ -267,7 +269,8 @@ def col3_graph_scatter(n):
     return {'data': [data],'layout' : go.Layout(xaxis=dict(range=[min(data_x),max(data_x)]),
                                                 yaxis=dict(range=[min(data_y),max(data_y)]),
                                                 xaxis_title="Time in seconds",
-                                                yaxis_title=col)}
+                                                yaxis_title=col,
+                                                title=col)}
 
 @dash_app.callback(Output('pCut::CTRL_Position_controller::Actual_speed', 'figure'),
         [Input('col4-update', 'n_intervals')])
@@ -292,7 +295,8 @@ def col4_graph_scatter(n):
     return {'data': [data],'layout' : go.Layout(xaxis=dict(range=[min(data_x),max(data_x)]),
                                                 yaxis=dict(range=[min(data_y),max(data_y)]),
                                                 xaxis_title="Time in seconds",
-                                                yaxis_title=col)}
+                                                yaxis_title=col,
+                                                title=col)}
 
 @dash_app.callback(Output('pSvolFilm::CTRL_Position_controller::Actual_position', 'figure'),
         [Input('col5-update', 'n_intervals')])
@@ -317,7 +321,8 @@ def col5_graph_scatter(n):
     return {'data': [data],'layout' : go.Layout(xaxis=dict(range=[min(data_x),max(data_x)]),
                                                 yaxis=dict(range=[min(data_y),max(data_y)]),
                                                 xaxis_title="Time in seconds",
-                                                yaxis_title=col)}
+                                                yaxis_title=col,
+                                                title=col)}
 
 @dash_app.callback(Output('pSvolFilm::CTRL_Position_controller::Actual_speed', 'figure'),
         [Input('col6-update', 'n_intervals')])
@@ -341,7 +346,8 @@ def col6_graph_scatter(n):
     return {'data': [data],'layout' : go.Layout(xaxis=dict(range=[min(data_x),max(data_x)]),
                                                 yaxis=dict(range=[min(data_y),max(data_y)]),
                                                 xaxis_title="Time in seconds",
-                                                yaxis_title=col)}
+                                                yaxis_title=col,
+                                                title=col)}
 
 @dash_app.callback(Output('pSvolFilm::CTRL_Position_controller::Lag_error', 'figure'),
         [Input('col7-update', 'n_intervals')])
@@ -365,7 +371,8 @@ def col7_graph_scatter(n):
     return {'data': [data],'layout' : go.Layout(xaxis=dict(range=[min(data_x),max(data_x)]),
                                                 yaxis=dict(range=[min(data_y),max(data_y)]),
                                                 xaxis_title="Time in seconds",
-                                                yaxis_title=col)}
+                                                yaxis_title=col,
+                                                title=col)}
 
 @dash_app.callback(Output('pSpintor::VAX_speed', 'figure'),
         [Input('col8-update', 'n_intervals')])
@@ -389,7 +396,8 @@ def col8_graph_scatter(n):
     return {'data': [data],'layout' : go.Layout(xaxis=dict(range=[min(data_x),max(data_x)]),
                                                 yaxis=dict(range=[min(data_y),max(data_y)]),
                                                 xaxis_title="Time in seconds",
-                                                yaxis_title=col)}
+                                                yaxis_title=col,
+                                                title=col)}
 
 
 

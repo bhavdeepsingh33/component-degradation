@@ -8,11 +8,42 @@
 body{
     background:#ffeead;
 }
-h1{
-    text-align:center;
+
+
+#graphs{
+    /*
+    float:center;
+    display:block;
+    width:99%;
+    text_align:center;
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-left:5%;
+    padding-right:5%;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 10%;
+   */
+    float:center;
+    display:block;
+    width:30%;
+    text_align:center;
+    padding: 0 auto;
+    margin: 0 auto;
+    border-radius: 10%;
 }
 
-div {
+h1{
+    position:relative
+    width:100%;
+    text-align:center;
+    margin:10px auto;
+    font-size:40px;
+    
+}
+
+.sensor {
       background-color: lightgoldenrodyellow;
       width: 500px;
       height: 100px;
@@ -24,7 +55,15 @@ div {
       position:relative;
       display:inline;
 }
-
+#head{
+    width:99%;
+    padding:0px auto;
+    margin:0 auto;
+    margin-top: 40px;
+    margin-bottom:35px;
+    /*height:60px;*/
+    
+}
 #sensor_data{
 
 }
@@ -146,21 +185,7 @@ div {
     display: block;
 }
 
-#graphs{
-    float:center;
-    display:block;
-    /*width:100%;*/
-    text_align:center;
-    padding-top:0px;
-    padding-bottom:0px;
-    padding-left:5%;
-    padding-right:5%;
-    margin: 0 auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border-radius: 10%;
-   
-}
+
 
 </style>
 
@@ -179,6 +204,7 @@ div {
                     function(data){
                         if(data.result=='data not found'){
                             clearTimeout(intervalID);
+                            $('#data_end').css("display", "block");
                             $('#data_end').text("Data is not available!!!");
                         }
                         else{
@@ -229,62 +255,61 @@ div {
     }
 
 </script>
+<div id='head'>
 
-<h1>ONE YEAR COMPONENT DEGRADATION</h1>
-<p id='data_end' style='font-size:20px;text-align:center;color:red;'></p>
+    <h1>CUTTING BLADE SENSOR DATA</h1>
+    <p id='data_end' style='font-size:20px;text-align:center;color:red;display:none;'></p>
+    
 
-
-<button id='graphs' onclick="myFunction()"><p style='font-size:30px;text-align:center;'>Live Graphs</p></button>
+</div>
+<button id='graphs' onclick="myFunction()"><p style='font-size:30px;text-align:center;padding: 0px 10px;'>Real Time Plots</p></button>
 <br>
 <!--href='http://localhost:8050/dash/'-->
-<div id='month'>
+<div class='sensor' id='month'>
     <p id='column9'>Month</p>
     <p id='col9'></p>
 </div>
 
-<div id='prediction-div'>
+<div class='sensor'>
+    <p id='column1'>pCut::Motor_Torque</p>
+    <p id='col1'></p>
+</div>
+
+<div class='sensor' id='prediction-div'>
     <p id='prediction-box'>ANOMALOUS</p>
     <p id='prediction'></p>
     
-</div>
-
-
-
-
-<div>
-    <p id='column1'>pCut::Motor_Torque</p>
-    <p id='col1'></p>
 </div>
 
 <div id='times-of-degradation'>
     <p id='anomaly-time' style="font-size:22px;"><b>Seconds at which Anomaly Occured</b></p>
 </div>
 
-<div>
+<div class='sensor'>
     <p id='column2'>pCut::CTRL_Position_controller::Lag_error</p>
     <p id='col2'></p>
 </div>
-<div>
+<div class='sensor'>
     <p id='column3'>pCut::CTRL_Position_controller::Actual_position</p>    
     <p id='col3'></p>
 </div>
-<div>
+<div class='sensor'>
     <p id='column4'>pCut::CTRL_Position_controller::Actual_speed</p> 
     <p id='col4'></p>
 </div>
-<div>
+<div class='sensor'>
     <p id='column5'>pSvolFilm::CTRL_Position_controller::Actual_position</p>
     <p id='col5'></p>
 </div>
-<div>
+<div class='sensor'>
     <p id='column6'>pSvolFilm::CTRL_Position_controller::Actual_speed</p>
     <p id='col6'></p>
 </div>
-<div>
+<div class='sensor'>
     <p id='column7'>pSvolFilm::CTRL_Position_controller::Lag_error</p>
     <p id='col7'></p>
 </div>
-<div>
+<div class='sensor'>
     <p id='column8'>pSpintor::VAX_speed</p>
     <p id='col8'></p>
 </div>
