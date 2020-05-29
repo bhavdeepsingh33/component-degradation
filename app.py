@@ -23,10 +23,6 @@ import plotly.graph_objs as go
 from collections import deque
 
 
-
-
-
-
 app = Flask(__name__)
 
 
@@ -404,14 +400,8 @@ if __name__ == '__main__':
 
 
 
-
-
-
-
-
-
-
-
+# END OF APPLICATION
+##################################################################################################
 """
         dcc.Graph(id='pCut::CTRL_Position_controller::Actual_position', animate=True),
         dcc.Interval(
