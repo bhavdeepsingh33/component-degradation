@@ -404,8 +404,8 @@ def col8_graph_scatter(n):
 
 
 if __name__ == '__main__':
-    dash_app.run_server()
-
+    #dash_app.run_server()
+    dash_app.run_server(host="0.0.0.0", port = 5000)
 
 
 # END OF APPLICATION
