@@ -3,7 +3,8 @@
 ## CUTTING BLADE DEGRADATION and PREDICTIVE MAINTENANCE - DEPLOYMENT
 
 ![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-blue.svg) ![Python 3.6](https://img.shields.io/badge/Python-3.6-brightgreen.svg) 
-![scikit-learnn](https://img.shields.io/badge/Library-Scikit_Learn-orange.svg)
+![Scikit-Learn](https://img.shields.io/badge/Library-Scikit_Learn-orange.svg) ![Heroku](https://img.shields.io/badge/Deployment-Heroku-yellow) 
+![Framework](https://img.shields.io/badge/Web--Framework-Flask_1.1.2-green)
 
 ### BACKGROUND
 The Vega shrink-wrapper from OCME is deployed in large production lines in the food and beverage industry. 
